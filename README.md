@@ -23,8 +23,16 @@ This git repository is using [submodules](http://www.git-scm.com/book/en/v2/Git-
 ```shell
 $ npm install
 $ bower install
-$ npm start && node unifile-server.js
+$ npm run build:all
+$ npm start
 ```
+### CKEditor
+
+Not needed to build upon sh script, just Download last version and extract into `dist\external_lib\ckeditor`
+
+### Others
+
+Unfortunately for beginners there will always be something missing. You must have a look to [Ronan Drouglazet](https://github.com/RonanDrouglazet) in commit `fix heroku build` ;)
 
 ## Contribute
 
