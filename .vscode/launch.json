@@ -18,8 +18,27 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "BackNode Chrome:HTTP",
+            "name": "Debug BackNode Chrome:HTTP",
             "url": "http://localhost:6969/",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Debug Map BackNode Chrome:HTTP",
+            "url": "http://localhost:6969/",
+            "webRoot": "${workspaceFolder}/dist/",
+            "sourceMapPathOverrides": {
+                "webpack:///./~/*": "${webRoot}/../../node_modules/*",
+                "webpack:///*": "${webRoot}/*",
+                "webpack:///./dist/*": "${webRoot}/lib/*"
+            }
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Debug cloud-explo Chrome:HTTP",
+            "url": "http://localhost:6969/lib/cloud-explorer/app/demo.html",
             "webRoot": "${workspaceFolder}"
         },
     ]
